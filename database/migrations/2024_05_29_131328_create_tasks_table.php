@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
+            $table->string('title', 50);
+            $table->text('description')->nullable();
+            $table->date('published_at')->nullable();
             $table->timestamps();
         });
     }

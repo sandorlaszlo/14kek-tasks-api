@@ -17,7 +17,9 @@ class TaskFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => $this->faker->sentence(3),
+            'description' => $this->faker->paragraph(5),
+            'published_at' => $this->faker->dateTimeBetween('-1 week', '+1 week'),
         ];
     }
 }
