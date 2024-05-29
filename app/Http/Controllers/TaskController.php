@@ -30,7 +30,10 @@ class TaskController extends Controller
         //     'published_at' => 'date',
         // ]);
 
+        $user = auth()->user();
+        $request->merge(['user_id' => $user->id]);
         $task = Task::create($request->all());
+
         $data = [
             'data' => $task,
             'message' => 'Task created successfully'

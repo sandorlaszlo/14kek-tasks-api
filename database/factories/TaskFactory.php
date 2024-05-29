@@ -20,6 +20,7 @@ class TaskFactory extends Factory
             'title' => $this->faker->sentence(3),
             'description' => $this->faker->paragraph(5),
             'published_at' => $this->faker->dateTimeBetween('-1 week', '+1 week'),
+            'user_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

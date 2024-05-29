@@ -13,5 +13,6 @@ class Task extends Model
         'title',
         'description',
         'published_at',
+        'user_id',
     ];
 }

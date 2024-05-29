@@ -1,0 +1,278 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "14kek_tasks_api",
+    "collectionId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+    "dateExported": "2024-05-29T15:42:23.497Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "dafa1fef-6532-4f9e-b9fc-76cf17d1ba48",
+            "name": "Tasks",
+            "containerId": "",
+            "created": "2024-05-29T15:11:52.845Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "1dd5961d-ff2f-4853-91cb-67746e118a6f",
+            "name": "Users",
+            "containerId": "",
+            "created": "2024-05-29T15:12:09.277Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "0ecda75e-bf4c-4a9d-afdd-23aaa5d46626",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "dafa1fef-6532-4f9e-b9fc-76cf17d1ba48",
+            "name": "Create new task",
+            "url": "http://127.0.0.1:8000/api/tasks",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-05-29T13:44:42.930Z",
+            "modified": "2024-05-29T15:40:54.967Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\" : \"Másik task\",\n  \"description\" : \"Lorem ipsum\",\n  \"published_at\" : \"2025-01-01\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "2|FTiBMq5j8Rlnk5TLBXG43SnbuW8sWgXZ9fYTuJXn5b8258fd"
+            }
+        },
+        {
+            "_id": "5da052ff-68b4-4a3b-a885-fa9b0512ac8b",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "dafa1fef-6532-4f9e-b9fc-76cf17d1ba48",
+            "name": "Update task",
+            "url": "http://127.0.0.1:8000/api/tasks/2",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-05-29T14:38:05.602Z",
+            "modified": "2024-05-29T14:40:48.032Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\" : \"Valami más\",\n  \"description\" : \"Ez meg a leírása\",\n  \"published_at\" : \"2025-01-02\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9da52b45-da04-4efa-9c70-eef775a3ba19",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "dafa1fef-6532-4f9e-b9fc-76cf17d1ba48",
+            "name": "Update task - PUT",
+            "url": "http://127.0.0.1:8000/api/tasks/2",
+            "method": "PATCH",
+            "sortNum": 30000,
+            "created": "2024-05-29T14:39:48.531Z",
+            "modified": "2024-05-29T14:39:48.531Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"published_at\" : \"2025-01-01\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "dd10ebcc-7d40-4723-9ce8-5922c11a3f28",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "dafa1fef-6532-4f9e-b9fc-76cf17d1ba48",
+            "name": "Get all tasks",
+            "url": "http://127.0.0.1:8000/api/tasks",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-05-29T14:15:35.962Z",
+            "modified": "2024-05-29T15:34:56.717Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|Z4T97fnuqI1r7G9NnOePF1YDR46eDjSPzkATdgSjae2949f5"
+            }
+        },
+        {
+            "_id": "99d4d3f4-e688-490e-8e06-7bdc1a1e7e00",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "dafa1fef-6532-4f9e-b9fc-76cf17d1ba48",
+            "name": "Get published tasks",
+            "url": "http://127.0.0.1:8000/api/tasks/published/all",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-05-29T14:47:14.379Z",
+            "modified": "2024-05-29T14:53:03.469Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "899cefaa-2fc0-4ff4-b711-c465836382fd",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "dafa1fef-6532-4f9e-b9fc-76cf17d1ba48",
+            "name": "Search published task",
+            "url": "http://127.0.0.1:8000/api/tasks/published/29",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-05-29T14:55:27.211Z",
+            "modified": "2024-05-29T14:56:06.122Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "2d66feff-f4dc-43ca-b6b1-fd1e4b3c6d51",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "dafa1fef-6532-4f9e-b9fc-76cf17d1ba48",
+            "name": "Search task",
+            "url": "http://127.0.0.1:8000/api/tasks/1",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-05-29T14:27:27.015Z",
+            "modified": "2024-05-29T14:32:19.122Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "932752b3-12c7-4eea-9b52-7b681fc09ff3",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "dafa1fef-6532-4f9e-b9fc-76cf17d1ba48",
+            "name": "Delete task",
+            "url": "http://127.0.0.1:8000/api/tasks/1",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2024-05-29T14:36:07.686Z",
+            "modified": "2024-05-29T14:36:26.342Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "9af10d51-62fa-4b1a-9f31-92f8637c9255",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "1dd5961d-ff2f-4853-91cb-67746e118a6f",
+            "name": "Login",
+            "url": "http://127.0.0.1:8000/api/login",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-05-29T15:12:30.629Z",
+            "modified": "2024-05-29T15:40:34.118Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"alene47@example.org\",\n  \"password\": \"password\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "56d96fc8-d1da-463a-b340-f66436dc831b",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "1dd5961d-ff2f-4853-91cb-67746e118a6f",
+            "name": "Get user data",
+            "url": "http://127.0.0.1:8000/api/user",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-05-29T15:30:39.716Z",
+            "modified": "2024-05-29T15:32:44.861Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "1|Z4T97fnuqI1r7G9NnOePF1YDR46eDjSPzkATdgSjae2949f5"
+            }
+        }
+    ],
+    "ref": "DbgMXLDjaKhQYB0X2eSpa6cx9r--2UxZolJUKr87xB8XZF7LGetzTxRvCV4SEnwVIptkM7Kwnkmea6eDfJutJQ"
+}

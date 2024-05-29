@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +28,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Route::put('/tasks/{task}', [TaskController::class, 'update']);
 // Route::patch('/tasks/{task}', [TaskController::class, 'update']);
 
-Route::apiResource('/tasks', TaskController::class);
-Route::get('/tasks/published/all', [TaskController::class, 'published']);
-Route::get('/tasks/published/{task}', [TaskController::class, 'showPublished']);
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('/tasks', TaskController::class);
+    Route::get('/tasks/published/all', [TaskController::class, 'published']);
+    Route::get('/tasks/published/{task}', [TaskController::class, 'showPublished']);
+});
+
+
+Route::post('login', [AuthController::class, 'login']);

@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->references('id')->on('users');
+            //$table->foreignId('user_id')->constrained();
             $table->string('title', 50);
             $table->text('description')->nullable();
             $table->date('published_at')->nullable();
