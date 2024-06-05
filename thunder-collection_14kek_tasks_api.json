@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "14kek_tasks_api",
     "collectionId": "b4926596-b821-447f-847c-abd0bd3bd13a",
-    "dateExported": "2024-05-29T15:42:23.497Z",
+    "dateExported": "2024-06-05T13:38:58.404Z",
     "version": "1.2",
     "folders": [
         {
@@ -112,7 +112,7 @@
             "method": "GET",
             "sortNum": 40000,
             "created": "2024-05-29T14:15:35.962Z",
-            "modified": "2024-05-29T15:34:56.717Z",
+            "modified": "2024-06-05T13:12:50.600Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -125,7 +125,7 @@
             ],
             "auth": {
                 "type": "bearer",
-                "bearer": "1|Z4T97fnuqI1r7G9NnOePF1YDR46eDjSPzkATdgSjae2949f5"
+                "bearer": "1|JWV9uzrTobzeNIcSswiXZ5s0kJ6bZF0ZrDqVmzsl32eecd34"
             }
         },
         {
@@ -221,7 +221,7 @@
             "method": "POST",
             "sortNum": 90000,
             "created": "2024-05-29T15:12:30.629Z",
-            "modified": "2024-05-29T15:40:34.118Z",
+            "modified": "2024-06-05T13:11:07.085Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -239,7 +239,38 @@
             ],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"alene47@example.org\",\n  \"password\": \"password\"\n}",
+                "raw": "{\n  \"email\": \"block.darrin@example.org\",\n  \"password\": \"password\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b86cf4e7-c08b-4901-9da0-93d7567c0e77",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "1dd5961d-ff2f-4853-91cb-67746e118a6f",
+            "name": "Register",
+            "url": "http://127.0.0.1:8000/api/register",
+            "method": "POST",
+            "sortNum": 95000,
+            "created": "2024-06-05T13:24:53.992Z",
+            "modified": "2024-06-05T13:31:52.127Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"gipsz1.jakab@example.org\",\n  \"password\": \"password123A$\",\n  \"name\" : \"Gipsz Jakab 1\"\n}",
                 "form": []
             }
         },
@@ -252,7 +283,7 @@
             "method": "GET",
             "sortNum": 100000,
             "created": "2024-05-29T15:30:39.716Z",
-            "modified": "2024-05-29T15:32:44.861Z",
+            "modified": "2024-06-05T13:11:18.519Z",
             "headers": [
                 {
                     "name": "Accept",
@@ -270,9 +301,39 @@
             ],
             "auth": {
                 "type": "bearer",
-                "bearer": "1|Z4T97fnuqI1r7G9NnOePF1YDR46eDjSPzkATdgSjae2949f5"
+                "bearer": "1|JWV9uzrTobzeNIcSswiXZ5s0kJ6bZF0ZrDqVmzsl32eecd34"
+            }
+        },
+        {
+            "_id": "98ea3e66-d09e-4646-9ae9-a2ed3506832f",
+            "colId": "b4926596-b821-447f-847c-abd0bd3bd13a",
+            "containerId": "1dd5961d-ff2f-4853-91cb-67746e118a6f",
+            "name": "Logout",
+            "url": "http://127.0.0.1:8000/api/logout",
+            "method": "POST",
+            "sortNum": 100000,
+            "created": "2024-06-05T13:36:32.623Z",
+            "modified": "2024-06-05T13:37:33.074Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                },
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "6|dEiIVTExNZTzuh7c1SAGWquJxHPDqVdxtNbrONVR709738f4"
             }
         }
     ],
-    "ref": "DbgMXLDjaKhQYB0X2eSpa6cx9r--2UxZolJUKr87xB8XZF7LGetzTxRvCV4SEnwVIptkM7Kwnkmea6eDfJutJQ"
+    "ref": "DbgMXLDjaKhQYB0X2eSpa9ywVHt7219vhozPFFxiFn0ZImhhIV5nIVM4DHrKqeTJxSRN1subkme2iemdK2SvNg"
 }

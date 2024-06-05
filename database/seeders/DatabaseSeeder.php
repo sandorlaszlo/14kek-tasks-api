@@ -23,8 +23,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         User::factory(5)->create();
-        Task::factory(100)->create([
-            // 'user_id' => User::all()->random()->id,
-        ]);
+        Task::factory(100)->create();
     }
 }

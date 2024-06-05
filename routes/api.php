@@ -32,7 +32,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('/tasks', TaskController::class);
     Route::get('/tasks/published/all', [TaskController::class, 'published']);
     Route::get('/tasks/published/{task}', [TaskController::class, 'showPublished']);
+
+    Route::post('logout', [AuthController::class, 'logout']);
+
 });
 
 
 Route::post('login', [AuthController::class, 'login']);
+Route::post('register', [AuthController::class, 'register']);
