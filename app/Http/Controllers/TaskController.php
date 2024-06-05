@@ -13,7 +13,9 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return response()->json(Task::all());
+        $user = auth()->user();
+        $tasks = Task::where('user_id', $user->id)->get();
+        return response()->json($tasks);
     }
 
     /**
@@ -51,6 +53,11 @@ class TaskController extends Controller
         // if (!$task) {
         //     return response()->json(['message' => 'Task not found'], 404);
         // }
+
+        if ($task->user_id != auth()->user()->id) {
+            return response()->json(['message' => 'You are not authorized to make this request'], 403);
+        }
+
         return response()->json($task);
     }
 
@@ -59,6 +66,10 @@ class TaskController extends Controller
      */
     public function update(Request $request, Task $task)
     {
+        if ($task->user_id != auth()->user()->id) {
+            return response()->json(['message' => 'You are not authorized to make this request'], 403);
+        }
+
         $task->update($request->all());
         return response()->json($task);
     }
@@ -68,18 +79,29 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
+        if ($task->user_id != auth()->user()->id) {
+            return response()->json(['message' => 'You are not authorized to make this request'], 403);
+        }
+
         $task->delete();
         return response()->noContent();
     }
 
     public function published()
     {
-        $tasks = Task::where('published_at', '<=', now())->get();
+        $user = auth()->user();
+        $tasks = Task::where('published_at', '<=', now())
+                        ->where('user_id', $user->id)
+                        ->get();
         return response()->json($tasks);
     }
 
     public function showPublished(Task $task)
     {
+        if ($task->user_id != auth()->user()->id) {
+            return response()->json(['message' => 'You are not authorized to make this request'], 403);
+        }
+        
         if ($task->published_at > now()) {
             return response()->json(['message' => 'Task not published'], 404);
         }
